@@ -1,0 +1,13 @@
+// $Id$
+// vim:ft=javascript
+
+// If your extension references something external, use ARG_WITH
+// ARG_WITH("nanomsg", "for nanomsg support", "no");
+
+// Otherwise, use ARG_ENABLE
+// ARG_ENABLE("nanomsg", "enable nanomsg support", "no");
+
+if (PHP_NANOMSG != "no") {
+	EXTENSION("nanomsg", "nanomsg.c", PHP_EXTNAME_SHARED, "/DZEND_ENABLE_STATIC_TSRMLS_CACHE=1");
+}
+
