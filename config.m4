@@ -7,9 +7,9 @@ dnl without editing.
 
 dnl If your extension references something external, use with:
 
-dnl PHP_ARG_WITH(nanomsg, for nanomsg support,
-dnl Make sure that the comment is aligned:
-dnl [  --with-nanomsg             Include nanomsg support])
+PHP_ARG_WITH(nanomsg, for nanomsg support,
+Make sure that the comment is aligned:
+[  --with-nanomsg             Include nanomsg support])
 
 dnl Otherwise use enable:
 
