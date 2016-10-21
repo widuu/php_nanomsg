@@ -7,7 +7,6 @@ php:
 before_script:
     - git clone https://github.com/nanomsg/nanomsg.git
     - cd nanomsg
-    - ./autogen.sh
     - ./configure --prefix="${HOME}/nanomsg-master"
     - make
     - make install
@@ -17,7 +16,7 @@ before_script:
 script:
     - phpize
     - ./configure --with-nanomsg="${HOME}/nanomsg-master"
-    - make
+    - make CFLAGS="-I${HOME}/nanomsg-master/nanomsg/include" LDFLAGS="-L${HOME}/nanomsg-master/nanomsg/lib -lnanomsg"
     - export NO_INTERACTION=1
     - export REPORT_EXIT_STATUS=1
     - export TEST_PHP_EXECUTABLE=`which php`
