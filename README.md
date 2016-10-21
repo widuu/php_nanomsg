@@ -1,5 +1,7 @@
 #PHP_NANOMSG
 
+[![Build Status](https://travis-ci.org/widuu/php_nanomsg.svg?branch=master)](https://travis-ci.org/widuu/php_nanomsg)
+
 ## Requirements
 
 * PHP 5.3+
