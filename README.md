@@ -30,9 +30,7 @@ if (!extension_loaded('nanomsg')) {
     die("nanomsg extension not loaded");
 }
 
-$file = '/tmp/test.ipc';
-unlink($file);
-$address = 'ipc://' . $file;
+$address = 'ipc:///tmp/test.ipc';
 
 $sock1 = new Nanomsg( NanoMsg::AF_SP, NanoMsg::NN_PAIR );
 $sock2 = new Nanomsg( NanoMsg::AF_SP, NanoMsg::NN_PAIR );
